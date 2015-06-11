@@ -141,7 +141,7 @@ gulp.task('css', function(callback) {
 gulp.task('make', function(callback) {
 	sequence(
 		'clean',
-		['css', 'images', 'fonts', 'medias', 'js'],
+		['css', 'images', 'fonts', 'medias', 'html', 'js'],
 		'server',
 	callback);
 });
