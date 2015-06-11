@@ -1,0 +1,26 @@
+{
+  "name": "vino-app",
+  "version": "0.0.0",
+  "homepage": "https://github.com/matissev/vino-app",
+  "authors": [
+    "matissev",
+    "mlequillec",
+    "Pierre-Emmanuelm"
+  ],
+  "description": "The phone-gap demo application for \\\"vino\\\", the connected object managing vineyards.",
+  "main": "www/index.html",
+  "keywords": [
+    "vino",
+    "cordova",
+    "arduino",
+    "phone-gap"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
