@@ -1,0 +1,19 @@
+2015-06-11 15:18:17.397 Vino[2477:60476] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/Simon/Library/Developer/CoreSimulator/Devices/3456B5F2-31ED-4BC7-A8B0-EDC0CCA51932/data/Containers/Data/Application/016B3B26-80DF-4B9F-B6E3-15F7E08207FD/Library/Cookies/Cookies.binarycookies
+2015-06-11 15:18:17.974 Vino[2477:60476] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-11 15:18:17.975 Vino[2477:60476] Multi-tasking -> Device: YES, App: YES
+2015-06-11 15:18:18.005 Vino[2477:60476] Unlimited access to network resources
+2015-06-11 15:18:18.037 Vino[2477:60476] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-11 15:18:18.731 Vino[2477:60476] Bluetooth Serial Cordova Plugin - BLE version
+2015-06-11 15:18:18.731 Vino[2477:60476] (c)2013-2014 Don Coleman
+2015-06-11 15:18:18.740 Vino[2477:60476] [CDVTimer][bluetoothserial] 8.864999ms
+2015-06-11 15:18:18.740 Vino[2477:60476] [CDVTimer][TotalPluginStartup] 9.590983ms
+2015-06-11 15:18:19.070 Vino[2477:60476] Status of CoreBluetooth central manager changed 2 (State BLE unsupported (CBCentralManagerStateResetting))
+2015-06-11 15:18:20.084 Vino[2477:60476] Resetting plugins due to page load.
+2015-06-11 15:18:20.572 Vino[2477:60476] Finished load of: file:///Users/Simon/Library/Developer/CoreSimulator/Devices/3456B5F2-31ED-4BC7-A8B0-EDC0CCA51932/data/Containers/Bundle/Application/0D74CA24-CD70-425E-8468-5955C5F1C648/Vino.app/www/index.html
