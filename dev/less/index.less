@@ -16,100 +16,124 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-* {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+
+html {
+    zoom: 0.55;
+    // zoom: 0.427;
 }
 
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #A7A7A7),
-        color-stop(0.51, #E4E4E4)
-    );
-    background-attachment:fixed;
-    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
-    height:100%;
-    margin:0px;
-    padding:0px;
-    text-transform:uppercase;
-    width:100%;
+
+    margin: 0;
+    position: relative;
+    height: 1334px;
+    width: 750px;
+    background: blue;
+    outline: 1px solid black;
+    background: url(../img/background.jpg) no-repeat;
+    background-size: 750px 1334px;
+
+    font-family: brandon, sans-serif;
 }
 
-/* Portrait layout (default) */
-.app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
+.screen {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
 }
 
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .app {
-        background-position:left center;
-        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
+#connexion {
+    background: url(../img/connexion.png) no-repeat;
+    background-size: cover;
+    z-index: 2;
+
+    #login-button {
+        position: relative;
+        top: 75%;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 75px;
+        display: block;
+        font-size: 36px;
+        text-transform: uppercase;
+        color: white;
+        text-decoration: none;
+        font-weight: lighter;
+        width: 530px;
+        height: 75px;
+        border: 3px solid white;
+    }
+
+    opacity: 1;
+    transition: opacity 0.25s ease-in;
+
+    &.hidden {
+        opacity: 0;
     }
 }
 
-h1 {
-    font-size:24px;
-    font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
+#app-content {
+    opacity: 0;
+    z-index: 1;
+
+    transition: opacity 0.25s ease-out 0.25s;
+
+    &.shown {
+        opacity: 1;
+    }
 }
 
-.event {
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    color:#FFFFFF;
-    font-size:12px;
-    margin:0px 30px;
-    padding:2px 0px;
+#home {
+    background: url(../img/home.png) no-repeat;
+    background-size: cover;
 }
 
-.event.listening {
-    background-color:#333333;
-    display:block;
+#days {
+    background: url(../img/days.png) no-repeat;
+    background-size: cover;   
 }
 
-.event.received {
-    background-color:#4B946A;
-    display:none;
+#menu {
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    line-height: 22px;
+    top: 174px;
+    width: 660px;
+    border-bottom: 1px solid white;
+    height: 40px;
+
+    font-size: 27px;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: lighter;
+    
+    span {
+        height: 100%;
+        display: block;
+        width: 33%;
+        float: left;
+    }
+    
+    .selected {
+        color: rgba(255, 255, 255, 1);
+        font-weight: normal;
+
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            position: relative;
+            top: 15px;
+            border-bottom: 7px solid #332842;
+        }
+    }
 }
 
-@keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
- 
-@-webkit-keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
- 
-.blink {
-    animation:fade 3000ms infinite;
-    -webkit-animation:fade 3000ms infinite;
-}
+@import "variables";
+@import "fonts";
