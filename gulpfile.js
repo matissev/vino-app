@@ -198,8 +198,8 @@ gulp.task('images-dist', function(){
 				{ removeEmptyAttrs: true }
 			]
 		}))
-		.pipe(gulp.dest('www/img'));
-		// .pipe(run('imageOptim -j -a -q -d www/img/'));
+		.pipe(gulp.dest('www/img'))
+		.pipe(run('imageOptim -j -a -q -d www/img/'));
 		// IMAGE OPTIMIZER DESACTIVATED
 });
 
