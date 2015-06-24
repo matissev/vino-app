@@ -31,7 +31,10 @@ appContent = document.getElementById("app-content");
 
 loginPage = document.getElementById("connexion");
 homePage = document.getElementById("home-page");
+aside = document.getElementById("aside");
 dayPage = document.getElementById("day-page");
+weekPage = document.getElementById("week-page");
+monthPage = document.getElementById("month-page");
 
 loginButton.onclick = function(){
 	addClass(loginPage, 'hidden');
@@ -40,7 +43,7 @@ loginButton.onclick = function(){
 
 zoneLink.onclick = function(){
 	addClass(homePage, 'hidden');
-	addClass(dayPage, 'shown');
+	addClass(aside, 'shown');
 	addClass(nav, 'shown');
 	addClass(zoneLink, 'hidden');
 	addClass(backLink, 'shown');
@@ -49,7 +52,7 @@ zoneLink.onclick = function(){
 backLink.onclick = function(){
 	removeClass(homePage, 'hidden');
 	removeClass(nav, 'shown');
-	removeClass(dayPage, 'shown');
+	removeClass(aside, 'shown');
 	removeClass(zoneLink, 'hidden');
 	removeClass(backLink, 'shown');
 };
@@ -62,6 +65,11 @@ dayLink.onclick = function(){
 	addClass(date, 'day');
 	removeClass(date, 'month');
 	removeClass(date, 'week');
+
+	removeClass(dayPage, 'shown');
+	removeClass(weekPage, 'hidden-from-left');
+	addClass(weekPage, 'hidden-from-right');
+	removeClass(monthPage, 'shown');
 };
 
 weekLink.onclick = function(){
@@ -72,6 +80,11 @@ weekLink.onclick = function(){
 	addClass(date, 'week');
 	removeClass(date, 'month');
 	removeClass(date, 'day');
+
+	addClass(dayPage, 'shown');
+	removeClass(weekPage, 'hidden-from-right');
+	removeClass(weekPage, 'hidden-from-left');
+	removeClass(monthPage, 'shown');
 };
 
 monthLink.onclick = function(){
@@ -82,4 +95,9 @@ monthLink.onclick = function(){
 	addClass(date, 'month');
 	removeClass(date, 'week');
 	removeClass(date, 'day');
+
+	addClass(dayPage, 'shown');
+	removeClass(weekPage, 'hidden-from-right');
+	addClass(weekPage, 'hidden-from-left');
+	addClass(monthPage, 'shown');
 };
